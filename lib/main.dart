@@ -3,7 +3,6 @@
 // found in the LICENSE file.
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 import 'package:flutter_gen/gen_l10n/gallery_localizations.dart';
@@ -21,14 +20,6 @@ export 'package:gallery/data/demos.dart' show pumpDeferredLibraries;
 void main() {
   GoogleFonts.config.allowRuntimeFetching = false;
   runApp(const GalleryApp());
-}
-
-class GalleryAppScrollBehavior extends MaterialScrollBehavior {
-  @override
-  Set<PointerDeviceKind> get dragDevices => {
-        PointerDeviceKind.touch,
-        PointerDeviceKind.mouse,
-      };
 }
 
 class GalleryApp extends StatelessWidget {
